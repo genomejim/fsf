@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZeusControllerScript : MonoBehaviour {
+public class PlayerControllerScript : MonoBehaviour {
 	public float max_speed = 10f;
 	bool facing_right = true;
 	public Rigidbody2D projectile;
