@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class FlyingMovement : MonoBehaviour {
-	public float x_speed = 15;
-	public float y_speed = 0;
+	public float x_speed;
+	public float y_speed;
+	public int right_patrol_boundary;
+	public int left_patrol_boundary;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,15 +14,17 @@ public class FlyingMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		        if (rigidbody2D.position.x > 60) {
+		if (rigidbody2D.position.x > right_patrol_boundary) {
+			Debug.Log (x_speed);
 						x_speed = -x_speed;
 						y_speed = -y_speed;
 						Flip ();
-				} else if (rigidbody2D.position.x < -70) {
+		} else if (rigidbody2D.position.x < left_patrol_boundary) {
 						x_speed = -x_speed;
 						y_speed = -y_speed;
 						Flip ();
 				}
+		Debug.Log (rigidbody2D.velocity);
 		rigidbody2D.velocity = new Vector2 (x_speed, y_speed);
 	}
 	void Flip () {
