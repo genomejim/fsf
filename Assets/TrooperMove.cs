@@ -8,6 +8,8 @@ public class TrooperMove : MonoBehaviour {
 	public Rigidbody2D projectile;
 	public float jump_speed = .3f;
 	public string enemy_tag;
+	public float HitPoints;
+	public TextMesh HPDisplay;
 	
 	// Use this for initialization
 	void Start () {
@@ -25,6 +27,11 @@ public class TrooperMove : MonoBehaviour {
 			Flip ();
 		else if (move > 0 && facing_right)
 			Flip ();
+		HPDisplay.text = HitPoints.ToString();
+		
+		if (HitPoints <= 0) {
+			DestroyObject (gameObject);
+		}
 	}
 
 	
@@ -33,5 +40,14 @@ public class TrooperMove : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+		
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		Debug.Log (coll.relativeVelocity.magnitude);
+		if (coll.relativeVelocity.magnitude > 12) {
+			HitPoints = HitPoints - coll.relativeVelocity.magnitude;
+				}
+		
 	}
 }

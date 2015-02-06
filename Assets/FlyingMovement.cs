@@ -14,10 +14,10 @@ public class FlyingMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Debug.Log (rigidbody2D.velocity);
+		//Debug.Log (rigidbody2D.velocity);
 
 		if (rigidbody2D.position.x > right_patrol_boundary) {
-			Debug.Log (x_speed);
+			//Debug.Log (x_speed);
 
 						Flip ();
 		} else if (rigidbody2D.position.x < left_patrol_boundary) {
