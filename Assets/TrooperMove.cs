@@ -29,6 +29,9 @@ public class TrooperMove : MonoBehaviour {
 		else if (move > 0 && facing_right)
 			Flip ();
 		HPDisplay.text = HitPoints.ToString();
+		if (HitPoints < 50) {
+			healthbar.renderer.material.SetColor("_SpecColor", Color.red);
+				}
 		healthbar.transform.localScale = new Vector3 (HitPoints/100f,.1f,0f);
 		
 		if (HitPoints <= 0) {
