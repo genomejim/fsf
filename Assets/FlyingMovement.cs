@@ -34,6 +34,6 @@ public class FlyingMovement : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 		x_speed = -x_speed;
-		y_speed = -y_speed + Random.Range(-1,1);
+		y_speed = -y_speed + Random.Range(-1,1.2f);
 	}
 }
