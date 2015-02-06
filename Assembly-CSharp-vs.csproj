@@ -52,7 +52,6 @@
      <Compile Include="Assets\SpawnPrefab.cs" />
      <Compile Include="Assets\TimedExplosion.cs" />
      <Compile Include="Assets\TrooperMove.cs" />
-     <Compile Include="Assets\e2d demo\Basic\BasicGUI.cs" />
      <Compile Include="Assets\e2d demo\Camera\CameraFocus.cs" />
      <Compile Include="Assets\e2d demo\Car\CarControl.cs" />
      <Compile Include="Assets\e2d demo\Car\CarGUI.cs" />
