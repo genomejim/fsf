@@ -10,6 +10,7 @@ public class TrooperMove : MonoBehaviour {
 	public string enemy_tag;
 	public float HitPoints;
 	public TextMesh HPDisplay;
+	public GameObject healthbar;
 	
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,7 @@ public class TrooperMove : MonoBehaviour {
 		else if (move > 0 && facing_right)
 			Flip ();
 		HPDisplay.text = HitPoints.ToString();
+		healthbar.transform.localScale = new Vector3 (HitPoints/100f,.1f,0f);
 		
 		if (HitPoints <= 0) {
 			DestroyObject (gameObject);
