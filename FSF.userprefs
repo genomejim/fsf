@@ -1,15 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Particles\Legacy Particles\TimedObjectDestructor.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EngageWithProjectile.cs">
     <Files>
       <File FileName="Assets\PlayerControllerScript.cs" Line="46" Column="1" />
       <File FileName="Assets\SmoothFollow2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\TimedExplosion.cs" Line="1" Column="1" />
+      <File FileName="Assets\TimedExplosion.cs" Line="28" Column="51" />
       <File FileName="Assets\SpawnPrefab.cs" Line="36" Column="1" />
       <File FileName="Assets\FlyingMovement.cs" Line="17" Column="5" />
-      <File FileName="Assets\ChangeScene.cs" Line="1" Column="1" />
-      <File FileName="Assets\TrooperMove.cs" Line="32" Column="63" />
-      <File FileName="Assets\EngageWithProjectile.cs" Line="49" Column="7" />
+      <File FileName="Assets\ChangeScene.cs" Line="6" Column="2" />
+      <File FileName="Assets\TrooperMove.cs" Line="33" Column="66" />
+      <File FileName="Assets\EngageWithProjectile.cs" Line="59" Column="149" />
       <File FileName="Assets\Standard Assets\Particles\Legacy Particles\TimedObjectDestructor.js" Line="1" Column="1" />
       <File FileName="Assets\HealthPool.cs" Line="5" Column="2" />
     </Files>

@@ -14,9 +14,9 @@ public class ChangeScene : MonoBehaviour {
 	void Update () {
 
 		time_counter += Time.deltaTime;
-		timer.text = time_counter.ToString();
+		//timer.text = time_counter.ToString();
 
-		if (time_counter > 100) {
+		if (time_counter > 500) {
 						Application.LoadLevel ("monkey");
 				}
 	}

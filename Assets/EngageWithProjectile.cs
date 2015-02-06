@@ -46,7 +46,7 @@ public class EngageWithProjectile : MonoBehaviour {
 			//Debug.DrawLine (raycast_origin,hit.point,Color.red,100f);
 			//Debug.Log (hit.collider.name);
 			if (hit && total_spawned < total_to_spawn ) {
-				float distance = Vector2.Distance (raycast_origin, hit.point);
+				//float distance = Vector2.Distance (raycast_origin, hit.point);
 				//Debug.DrawLine (raycast_origin,hit.point,Color.red,100f);
 				//Debug.Log (hit.collider.tag);
 				//Debug.Log (distance);
@@ -56,7 +56,7 @@ public class EngageWithProjectile : MonoBehaviour {
 					Vector3 projectile_start = new Vector3 (transform.position.x, transform.position.y);
 					Rigidbody2D clone = Instantiate (projectile, projectile_start, transform.rotation) as Rigidbody2D;
 					
-					Vector2 impulse = new Vector2 (rigidbody2D.velocity.x + grenade_x * Random.Range (1, 2),rigidbody2D.velocity.y + grenade_y * Random.Range (1, 2));
+					Vector2 impulse = new Vector2 (rigidbody2D.velocity.x + grenade_x * Random.Range (0, 2),rigidbody2D.velocity.y + grenade_y * Random.Range (1, 3));
 					clone.rigidbody2D.AddForce(impulse,ForceMode2D.Impulse);
 					
 					clone.renderer.enabled = true;
