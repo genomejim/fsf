@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TimedExplosion.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FlyingMovement.cs">
     <Files>
       <File FileName="Assets\PlayerControllerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\SmoothFollow2D.cs" Line="1" Column="1" />
       <File FileName="Assets\TimedExplosion.cs" Line="23" Column="76" />
+      <File FileName="Assets\SpawnPrefab.cs" Line="36" Column="40" />
+      <File FileName="Assets\FlyingMovement.cs" Line="37" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
