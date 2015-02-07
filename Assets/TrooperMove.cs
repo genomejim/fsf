@@ -11,7 +11,8 @@ public class TrooperMove : MonoBehaviour {
 	public float HitPoints;
 	public TextMesh HPDisplay;
 	public GameObject healthbar;
-	
+	public GameObject scorekeeper;
+
 	// Use this for initialization
 	void Start () {
 
@@ -20,22 +21,36 @@ public class TrooperMove : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		
-		float move = -1;
-		int random_number = Random.Range (1, 2);
-		rigidbody2D.velocity = new Vector2 (move * max_speed * random_number, rigidbody2D.velocity.y);
+				float move = -1;
+				int random_number = Random.Range (1, 2);
+				rigidbody2D.velocity = new Vector2 (move * max_speed * random_number, rigidbody2D.velocity.y);
 		
-		if (move < 0 && !facing_right)
-			Flip ();
-		else if (move > 0 && facing_right)
-			Flip ();
-		HPDisplay.text = HitPoints.ToString();
-		if (HitPoints < 50) {
-			healthbar.renderer.material.SetColor("_SpecColor", Color.red);
+				if (move < 0 && !facing_right)
+						Flip ();
+				else if (move > 0 && facing_right)
+						Flip ();
+				HPDisplay.text = HitPoints.ToString ();
+				if (HitPoints < 50) {
+						healthbar.renderer.material.SetColor ("_SpecColor", Color.red);
 				}
-		healthbar.transform.localScale = new Vector3 (HitPoints/100f,.1f,0f);
+				healthbar.transform.localScale = new Vector3 (HitPoints / 100f, .1f, 0f);
 		
-		if (HitPoints <= 0) {
-			DestroyObject (gameObject);
+				if (HitPoints <= 0) {
+						//Debug.Log (gameObject.tag);
+						if (gameObject.tag == "enemy") {
+							GameObject scenechanger = GameObject.Find("SceneChanger");
+							//GUIText allyscoretext = scenechanger.GetComponent(GUIText("AllyScoreText");
+				            //Component allyscore = scenechanger.GetComponentsInChildren("AllyScore");
+				            //Debug.Log (allyscore);
+
+
+						} //else if (gameObject.tag == "enemy"){
+							//GameObject scenechanger = GameObject.Find("SceneChanger");
+							//scenechanger.EnemyScore++;
+				//}
+
+				DestroyObject (gameObject);
+
 		}
 	}
 
@@ -49,7 +64,7 @@ public class TrooperMove : MonoBehaviour {
 		
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Debug.Log (coll.relativeVelocity.magnitude);
+		//Debug.Log (coll.relativeVelocity.magnitude);
 		if (coll.relativeVelocity.magnitude > 12) {
 			HitPoints = HitPoints - coll.relativeVelocity.magnitude;
 				}

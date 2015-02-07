@@ -31,7 +31,7 @@ public class EngageWithProjectile : MonoBehaviour {
 		if (time_counter > time_between_spawns + random_number * random_number && total_spawned < total_to_spawn && use_engage_random_delay) {
 			Engage ();
 			time_counter = 0;
-		} else if (time_counter > time_between_spawns) {
+		} else if (time_counter > time_between_spawns  && !use_engage_random_delay) {
 			Engage ();
 			time_counter = 0;
 		}
@@ -56,7 +56,7 @@ public class EngageWithProjectile : MonoBehaviour {
 					Vector3 projectile_start = new Vector3 (transform.position.x, transform.position.y);
 					Rigidbody2D clone = Instantiate (projectile, projectile_start, transform.rotation) as Rigidbody2D;
 					
-					Vector2 impulse = new Vector2 (rigidbody2D.velocity.x + grenade_x * Random.Range (0, 2),rigidbody2D.velocity.y + grenade_y * Random.Range (1, 3));
+					Vector2 impulse = new Vector2 (rigidbody2D.velocity.x + grenade_x * Random.Range (0, 2),rigidbody2D.velocity.y + grenade_y * Random.Range (-1, 2));
 					clone.rigidbody2D.AddForce(impulse,ForceMode2D.Impulse);
 					
 					clone.renderer.enabled = true;
