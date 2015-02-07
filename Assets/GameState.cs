@@ -12,8 +12,8 @@ public class GameState : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Debug.Log (AllyScore);
-		Debug.Log (EnemyScore);
+//		Debug.Log (AllyScore);
+//		Debug.Log (EnemyScore);
 	
 	}
 }
