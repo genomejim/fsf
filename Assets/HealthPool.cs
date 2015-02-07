@@ -11,7 +11,7 @@ public class HealthPool : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		HPDisplay.text = HitPoints.ToString();
+		//HPDisplay.text = HitPoints.ToString();
 
 		if (HitPoints <= 0) {
 			DestroyObject (gameObject);

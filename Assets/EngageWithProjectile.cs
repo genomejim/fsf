@@ -46,7 +46,7 @@ public class EngageWithProjectile : MonoBehaviour {
 			//Debug.DrawLine (raycast_origin,hit.point,Color.red,100f);
 			//Debug.Log (hit.collider.name);
 			if (hit && total_spawned < total_to_spawn ) {
-				//float distance = Vector2.Distance (raycast_origin, hit.point);
+				
 				//Debug.DrawLine (raycast_origin,hit.point,Color.red,100f);
 				//Debug.Log (hit.collider.tag);
 				//Debug.Log (distance);

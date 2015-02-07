@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TrooperMove : MonoBehaviour {
+public class TrooperMove : MonoBehaviour { 
 
 	public float max_speed = 10f;
 	bool facing_right = true;
@@ -38,16 +38,10 @@ public class TrooperMove : MonoBehaviour {
 				if (HitPoints <= 0) {
 						//Debug.Log (gameObject.tag);
 						if (gameObject.tag == "enemy") {
-							GameObject scenechanger = GameObject.Find("SceneChanger");
-							//GUIText allyscoretext = scenechanger.GetComponent(GUIText("AllyScoreText");
-				            //Component allyscore = scenechanger.GetComponentsInChildren("AllyScore");
-				            //Debug.Log (allyscore);
-
-
-						} //else if (gameObject.tag == "enemy"){
-							//GameObject scenechanger = GameObject.Find("SceneChanger");
-							//scenechanger.EnemyScore++;
-				//}
+							GameState.AllyScore++;
+						} else if (gameObject.tag == "ally"){
+							GameState.EnemyScore++;
+						}
 
 				DestroyObject (gameObject);
 

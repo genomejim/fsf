@@ -49,8 +49,11 @@
      <Compile Include="Assets\ChangeScene.cs" />
      <Compile Include="Assets\EngageWithProjectile.cs" />
      <Compile Include="Assets\FlyingMovement.cs" />
+     <Compile Include="Assets\GameState.cs" />
      <Compile Include="Assets\HealthPool.cs" />
      <Compile Include="Assets\PlayerControllerScript.cs" />
+     <Compile Include="Assets\PublicScript.cs" />
+     <Compile Include="Assets\ScriptB.cs" />
      <Compile Include="Assets\SmoothFollow2D.cs" />
      <Compile Include="Assets\SpawnPrefab.cs" />
      <Compile Include="Assets\TimedExplosion.cs" />

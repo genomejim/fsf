@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChangeScene : MonoBehaviour {
+public class ChangeScene : MonoBehaviour { 
 	float time_counter;
-	public GUIText timer;
+	//public GUIText timer;
 	//public GameObject scorekeeper;
 	public GUIText AllyScoreText;
 	public GUIText EnemyScoreText;
@@ -18,9 +18,11 @@ public class ChangeScene : MonoBehaviour {
 	void Update () {
 
 		time_counter += Time.deltaTime;
-		timer.text = (500f - time_counter).ToString("F2");
-		AllyScoreText.text = AllyScore.ToString();
-		EnemyScoreText.text = EnemyScore.ToString();
+		//timer.text = (500f - time_counter).ToString("F2");
+		AllyScoreText.text = GameState.AllyScore.ToString();
+
+		EnemyScoreText.text = GameState.EnemyScore.ToString();
+		//AllyScore = other.AllyScore;
 
 		if (time_counter > 500) {
 						Application.LoadLevel ("monkey");
