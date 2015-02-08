@@ -14,7 +14,11 @@ public class TankMotor : MonoBehaviour {
 	}
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "ally") {
+						//power through collisions like a TANK
 						rigidbody2D.velocity = new Vector2 (-10, rigidbody2D.velocity.y);
-				}
+						Quaternion keep_the_front_wheels_down = new Quaternion (0,0,0,15); 
+						rigidbody2D.transform.rotation = keep_the_front_wheels_down;
+
+		}
 	}
 }
