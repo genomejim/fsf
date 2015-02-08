@@ -11,7 +11,7 @@ public class TrooperMove : MonoBehaviour {
 	public float HitPoints;
 	public TextMesh HPDisplay;
 	public GameObject healthbar;
-	public GameObject scorekeeper;
+//	public GameObject scorekeeper;
 
 	// Use this for initialization
 	void Start () {

@@ -60,6 +60,7 @@
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\e2d\LICENSE.txt" />
      <None Include="Assets\e2d demo\Lerpz\Shaders\Particle Add (Overlay).shader" />
+     <None Include="Assets\2D Sky FREE\!Readme.txt" />
      <None Include="Assets\e2d\Resources\Grass.shader" />
   </ItemGroup>
   <ItemGroup>

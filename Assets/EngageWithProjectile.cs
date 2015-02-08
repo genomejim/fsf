@@ -17,6 +17,8 @@ public class EngageWithProjectile : MonoBehaviour {
 	public float raycast_distance;
 	public Vector2 engage_direction_modifier;
 	public bool use_engage_random_delay;
+	public float xoffset;
+	public float yoffset;
 
 	// Use this for initialization
 	void Start () {
@@ -39,7 +41,7 @@ public class EngageWithProjectile : MonoBehaviour {
 		void Engage () {
 			
 			
-			Vector2 raycast_origin = new Vector2 (rigidbody2D.position.x -.3f, rigidbody2D.position.y);
+			Vector2 raycast_origin = new Vector2 (rigidbody2D.position.x + xoffset, rigidbody2D.position.y + yoffset);
 			
 			int layerMask = 1 << raycast_layer;
 			RaycastHit2D hit = Physics2D.Raycast (raycast_origin,rigidbody2D.velocity + engage_direction_modifier,raycast_distance,layerMask);
@@ -53,10 +55,10 @@ public class EngageWithProjectile : MonoBehaviour {
 				if (hit.collider.tag == enemy_tag) {
 					//Debug.Log (hit.collider.tag);
 					//Debug.Log (distance);
-					Vector3 projectile_start = new Vector3 (transform.position.x, transform.position.y);
+					Vector3 projectile_start = new Vector3 (transform.position.x + xoffset, transform.position.y + yoffset);
 					Rigidbody2D clone = Instantiate (projectile, projectile_start, transform.rotation) as Rigidbody2D;
 					
-					Vector2 impulse = new Vector2 (rigidbody2D.velocity.x + grenade_x * Random.Range (0, 2),rigidbody2D.velocity.y + grenade_y * Random.Range (-1, 2));
+					Vector2 impulse = new Vector2 (rigidbody2D.velocity.x + grenade_x * Random.Range (1, 2),rigidbody2D.velocity.y + grenade_y * Random.Range (-1, 2));
 					clone.rigidbody2D.AddForce(impulse,ForceMode2D.Impulse);
 					
 					clone.renderer.enabled = true;
