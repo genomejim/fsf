@@ -61,7 +61,9 @@ public class TrooperMove : MonoBehaviour {
 		//Debug.Log (coll.relativeVelocity.magnitude);
 		if (coll.relativeVelocity.magnitude > 12) {
 			HitPoints = HitPoints - coll.relativeVelocity.magnitude;
-				}
-		
+		} else if (coll.gameObject.tag == "zonewall") {
+			DestroyObject (gameObject);
 	}
+	
+}
 }
