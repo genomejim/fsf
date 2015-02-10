@@ -25,11 +25,7 @@ public class PlayerControllerScript : MonoBehaviour {
 						Flip ();
 				else if (move < 0 && facing_right)
 						Flip ();
-		//bool firing = Input.GetKey (KeyCode.LeftControl);
-		//if (firing && available_bolts > 0)
-		//				Fire ();
-		//if (!firing && available_bolts < 1)
-		//				Load ();
+	
 		bool jumping = Input.GetKey (KeyCode.Space);
 		if (jumping)
 						Jump ();
@@ -61,15 +57,6 @@ public class PlayerControllerScript : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 		}
-	void Fire () {
-		Rigidbody2D clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody2D;
-		clone.velocity = transform.TransformDirection (Vector3.forward * 10);
-		clone.velocity = transform.TransformDirection (Vector3.up * 20);
-		clone.renderer.enabled = true;
-		available_bolts--;
-		}
-	void Load (){
-		if (available_bolts < 1)
-			available_bolts++;
-		}
+
+
 }

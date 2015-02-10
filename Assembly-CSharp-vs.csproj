@@ -55,6 +55,7 @@
      <Compile Include="Assets\HealthPool.cs" />
      <Compile Include="Assets\PlayerControllerScript.cs" />
      <Compile Include="Assets\PublicScript.cs" />
+     <Compile Include="Assets\ScienceBeam.cs" />
      <Compile Include="Assets\ScriptB.cs" />
      <Compile Include="Assets\SmoothFollow2D.cs" />
      <Compile Include="Assets\SpawnPrefab.cs" />
