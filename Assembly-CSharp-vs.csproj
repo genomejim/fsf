@@ -86,6 +86,7 @@
      <Compile Include="Assets\e2d\doxygen.cs" />
      <Compile Include="Assets\e2d\e2dTerrain.cs" />
      <Compile Include="Assets\e2d\e2dTerrainGenerator.cs" />
+     <Compile Include="Assets\jimanimation.cs" />
      <None Include="Assets\e2d\Resources\Fill.shader" />
      <None Include="Assets\e2d\Resources\Curve.shader" />
      <None Include="Assets\e2d\VERSION.txt" />
