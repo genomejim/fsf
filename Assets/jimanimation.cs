@@ -9,6 +9,7 @@ public class jimanimation : MonoBehaviour {
 	void Start () {
 		//player = gameObject.FindWithTag("Player");
 		player = GameObject.FindWithTag("Player");
+		anim.SetFloat ("Horizontal Movement", 0);
 	
 	}
 	

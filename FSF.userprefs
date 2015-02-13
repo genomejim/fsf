@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerControllerScript.cs">
     <Files>
+      <File FileName="Assets\jimanimation.cs" Line="1" Column="1" />
       <File FileName="Assets\PlayerControllerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\SpawnPrefab.cs" Line="1" Column="1" />
       <File FileName="Assets\FlyingMovement.cs" Line="1" Column="1" />
@@ -10,7 +11,6 @@
       <File FileName="Assets\GameState.cs" Line="1" Column="1" />
       <File FileName="Assets\TankMotor.cs" Line="1" Column="1" />
       <File FileName="Assets\EngageWithProjectile.cs" Line="1" Column="1" />
-      <File FileName="Assets\PlayerControllerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\SmoothFollow2D.cs" Line="1" Column="1" />
       <File FileName="Assets\TimedExplosion.cs" Line="1" Column="1" />
     </Files>
