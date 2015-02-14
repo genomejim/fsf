@@ -7,8 +7,9 @@ public class SmoothFollow2D : MonoBehaviour {
 	private Vector3 velocity = Vector3.zero;
 	public Transform target;
 	//public int zoom;
-	public int orthographicSizeMin;
-	public int orthographicSizeMax;
+	public int orthographicSizeMin = 1;
+	public int orthographicSizeMax = 50;
+
 	
 	// Update is called once per frame
 	void Update () 
@@ -21,14 +22,14 @@ public class SmoothFollow2D : MonoBehaviour {
 			Vector3 destination = transform.position + delta;
 			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
 		}
-		if (Input.GetAxis("Mouse ScrollWheel")  > 0) // forward
-		{ if (camera.orthographicSize > 0){
-			camera.orthographicSize--;
-			}
+		if (Input.GetAxis("Mouse ScrollWheel")  > 0 && camera.orthographicSize > orthographicSizeMin) // forward
+		{ 
+			camera.orthographicSize += -.5f;
+
 		}
-		if (Input.GetAxis("Mouse ScrollWheel")  < 0) // back
+		if (Input.GetAxis("Mouse ScrollWheel")  < 0 && camera.orthographicSize < orthographicSizeMax) // back
 		{
-			camera.orthographicSize++;
+			camera.orthographicSize += .5f;
 		}
 	}
 }
