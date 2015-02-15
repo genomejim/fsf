@@ -41,7 +41,7 @@ public class TrooperMove : MonoBehaviour {
 						//Debug.Log (gameObject.tag);
 						if (gameObject.tag == "enemy") {
 							GameState.AllyScore++;
-						} else if (gameObject.tag == "ally"){
+						} else if (gameObject.tag == "goodtrooper"){
 							GameState.EnemyScore++;
 						}
 

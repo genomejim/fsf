@@ -34,15 +34,17 @@ public class PlayerControllerScript : MonoBehaviour {
 
 		Vector2 down = new Vector2(0,-1);
 		Vector2 raycast_origin = new Vector2 (rigidbody2D.position.x, rigidbody2D.position.y - 1f);
-		RaycastHit2D hit = Physics2D.Raycast (raycast_origin, down, 2f);
+		RaycastHit2D hit = Physics2D.Raycast (raycast_origin, down, 20f);
 		//Debug.Log (hit.collider.name);
 		float distance = Vector2.Distance(raycast_origin, hit.point);
 		//Debug.Log (hit.collider.tag);
 		//Debug.Log (distance);
-		if (hit.collider.tag == "ground" && distance < .01f) {
-						grounded = true;
-						airborne = false;
-						//Debug.Log ("grounded");
+		if (hit) {
+						if (hit.collider.tag == "ground" && distance < .01f) {
+								grounded = true;
+								airborne = false;
+								//Debug.Log ("grounded");
+						}
 				}
 		if (grounded && airborne != true){
 				rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x, jump_speed);

@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\jimanimation.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TrooperMove.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerControllerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\jimanimation.cs" Line="1" Column="1" />
+      <File FileName="Assets\GoodTrooperPrefabAnimation.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\PlayerControllerScript.cs" Line="37" Column="65" />
+      <File FileName="Assets\Scripts\TrooperMove.cs" Line="84" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

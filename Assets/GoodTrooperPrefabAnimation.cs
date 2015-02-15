@@ -17,9 +17,9 @@ public class GoodTrooperPrefabAnimation : MonoBehaviour {
 	void FixedUpdate () {
 		
 		//player = gameObject.Find ("animated player");
-		HorizontalMovement = Mathf.Abs(trooper.rigidbody2D.velocity.x);
-		anim.SetFloat ("Horizontal Movement", HorizontalMovement);
-		
-		
+		if (trooper) {
+						HorizontalMovement = Mathf.Abs (trooper.rigidbody2D.velocity.x);
+						anim.SetFloat ("Horizontal Movement", HorizontalMovement);
+				}
 	}
 }
