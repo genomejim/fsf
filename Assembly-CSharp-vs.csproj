@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\2D Sky FREE\Scripts\CloudFlow.cs" />
      <Compile Include="Assets\2D Sky FREE\Scripts\SkyBG.cs" />
+     <Compile Include="Assets\GoodTrooperPrefabAnimation.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\EngageWithProjectile.cs" />
      <Compile Include="Assets\Scripts\FloatingText.cs" />
