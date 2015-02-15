@@ -50,6 +50,7 @@
      <Compile Include="Assets\2D Sky FREE\Scripts\SkyBG.cs" />
      <Compile Include="Assets\ChangeScene.cs" />
      <Compile Include="Assets\EngageWithProjectile.cs" />
+     <Compile Include="Assets\FloatingText.cs" />
      <Compile Include="Assets\FlyingMovement.cs" />
      <Compile Include="Assets\GameState.cs" />
      <Compile Include="Assets\HealthPool.cs" />

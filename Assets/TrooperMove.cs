@@ -11,6 +11,8 @@ public class TrooperMove : MonoBehaviour {
 	public float HitPoints;
 	public TextMesh HPDisplay;
 	public GameObject healthbar;
+	public TextMesh FloatingText;
+	//public TextMesh FloatingTextText;
 //	public GameObject scorekeeper;
 
 	// Use this for initialization
@@ -58,9 +60,21 @@ public class TrooperMove : MonoBehaviour {
 		
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		//Debug.Log (coll.relativeVelocity.magnitude);
+		//Debug.Log (coll.relativeVelocity.magnitude.ToString());
 		if (coll.relativeVelocity.magnitude > 12) {
+
 			HitPoints = HitPoints - coll.relativeVelocity.magnitude;
+
+				//Debug.Log ("coll.gameObject.name");
+				//Debug.Log (coll.gameObject.name);
+				//Debug.Log ("gameobject.name");
+				//Debug.Log (gameObject.name);
+				Quaternion rotation = new Quaternion (0, 0, 0, 0);
+				Vector2 TextPosition = new Vector2(gameObject.transform.position.x , gameObject.transform.position.y + .5f);
+				FloatingText.text = coll.relativeVelocity.magnitude.ToString("F0");
+				TextMesh clone = Instantiate (FloatingText, TextPosition , rotation) as TextMesh;
+				//clone.text = coll.relativeVelocity.magnitude.ToString();
+				//clone.text = "changed";
 		} else if (coll.gameObject.tag == "zonewall") {
 			DestroyObject (gameObject);
 	}
