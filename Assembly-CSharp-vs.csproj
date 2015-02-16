@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\FloatingText.cs" />
      <Compile Include="Assets\Scripts\FlyingMovement.cs" />
      <Compile Include="Assets\Scripts\GameState.cs" />
+     <Compile Include="Assets\Scripts\HUDFPS.cs" />
      <Compile Include="Assets\Scripts\HealthPool.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerScript.cs" />
      <Compile Include="Assets\Scripts\PublicScript.cs" />
